@@ -57,10 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9105CC4928847F6400B85C56 /* TimeGrid */ = {
+			isa = PBXGroup;
+			children = (
+				9106B09C288430AB002F4DE6 /* Sources */,
+				9106B0C628847BB3002F4DE6 /* Resources */,
+			);
+			path = TimeGrid;
+			sourceTree = "<group>";
+		};
 		9106B091288430AB002F4DE6 = {
 			isa = PBXGroup;
 			children = (
-				9106B09C288430AB002F4DE6 /* TimeGrid */,
+				9105CC4928847F6400B85C56 /* TimeGrid */,
 				9106B0B7288443B5002F4DE6 /* TimeGridTests */,
 				9106B09B288430AB002F4DE6 /* Products */,
 			);
@@ -75,18 +84,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9106B09C288430AB002F4DE6 /* TimeGrid */ = {
+		9106B09C288430AB002F4DE6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				9106B09D288430AB002F4DE6 /* AppDelegate.swift */,
 				9106B09F288430AB002F4DE6 /* SceneDelegate.swift */,
 				9106B0A1288430AB002F4DE6 /* ViewController.swift */,
-				9106B0A3288430AB002F4DE6 /* Main.storyboard */,
-				9106B0A6288430AC002F4DE6 /* Assets.xcassets */,
-				9106B0A8288430AC002F4DE6 /* LaunchScreen.storyboard */,
-				9106B0AB288430AC002F4DE6 /* Info.plist */,
 			);
-			path = TimeGrid;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		9106B0B7288443B5002F4DE6 /* TimeGridTests */ = {
@@ -95,6 +100,17 @@
 				9106B0B8288443B5002F4DE6 /* TimeGridTests.swift */,
 			);
 			path = TimeGridTests;
+			sourceTree = "<group>";
+		};
+		9106B0C628847BB3002F4DE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9106B0AB288430AC002F4DE6 /* Info.plist */,
+				9106B0A3288430AB002F4DE6 /* Main.storyboard */,
+				9106B0A6288430AC002F4DE6 /* Assets.xcassets */,
+				9106B0A8288430AC002F4DE6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +329,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeGrid/Resources/Info.plist";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -367,6 +385,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeGrid/Resources/Info.plist";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -386,7 +406,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6TZ3T94CD5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeGrid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeGrid/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Time Grid";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -415,7 +435,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6TZ3T94CD5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeGrid/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TimeGrid/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Time Grid";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
