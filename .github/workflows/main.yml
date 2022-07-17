@@ -4,7 +4,7 @@ on:
   push:
     branches: master
 env:
-  SIMULATOR: platform=iOS Simulator,name=iPhone 13 Pro,OS=15.4
+  SIMULATOR: platform=iOS Simulator,name=iPhone 13 Pro,OS=15.5
 
 jobs:
   pr-pipeline:
