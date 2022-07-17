@@ -13,7 +13,18 @@
 		9106B0A5288430AB002F4DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9106B0A3288430AB002F4DE6 /* Main.storyboard */; };
 		9106B0A7288430AC002F4DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9106B0A6288430AC002F4DE6 /* Assets.xcassets */; };
 		9106B0AA288430AC002F4DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9106B0A8288430AC002F4DE6 /* LaunchScreen.storyboard */; };
+		9106B0B9288443B5002F4DE6 /* TimeGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106B0B8288443B5002F4DE6 /* TimeGridTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9106B0BA288443B5002F4DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9106B092288430AB002F4DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9106B099288430AB002F4DE6;
+			remoteInfo = TimeGrid;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9106B09A288430AB002F4DE6 /* TimeGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,19 @@
 		9106B0A6288430AC002F4DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9106B0A9288430AC002F4DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9106B0AB288430AC002F4DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9106B0B6288443B5002F4DE6 /* TimeGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9106B0B8288443B5002F4DE6 /* TimeGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGridTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9106B097288430AB002F4DE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9106B0B3288443B5002F4DE6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9106B09C288430AB002F4DE6 /* TimeGrid */,
+				9106B0B7288443B5002F4DE6 /* TimeGridTests */,
 				9106B09B288430AB002F4DE6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				9106B09A288430AB002F4DE6 /* TimeGrid.app */,
+				9106B0B6288443B5002F4DE6 /* TimeGridTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +87,14 @@
 				9106B0AB288430AC002F4DE6 /* Info.plist */,
 			);
 			path = TimeGrid;
+			sourceTree = "<group>";
+		};
+		9106B0B7288443B5002F4DE6 /* TimeGridTests */ = {
+			isa = PBXGroup;
+			children = (
+				9106B0B8288443B5002F4DE6 /* TimeGridTests.swift */,
+			);
+			path = TimeGridTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +118,24 @@
 			productReference = 9106B09A288430AB002F4DE6 /* TimeGrid.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9106B0B5288443B5002F4DE6 /* TimeGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9106B0BC288443B5002F4DE6 /* Build configuration list for PBXNativeTarget "TimeGridTests" */;
+			buildPhases = (
+				9106B0B2288443B5002F4DE6 /* Sources */,
+				9106B0B3288443B5002F4DE6 /* Frameworks */,
+				9106B0B4288443B5002F4DE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9106B0BB288443B5002F4DE6 /* PBXTargetDependency */,
+			);
+			name = TimeGridTests;
+			productName = TimeGridTests;
+			productReference = 9106B0B6288443B5002F4DE6 /* TimeGridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +148,10 @@
 				TargetAttributes = {
 					9106B099288430AB002F4DE6 = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					9106B0B5288443B5002F4DE6 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 9106B099288430AB002F4DE6;
 					};
 				};
 			};
@@ -117,6 +169,7 @@
 			projectRoot = "";
 			targets = (
 				9106B099288430AB002F4DE6 /* TimeGrid */,
+				9106B0B5288443B5002F4DE6 /* TimeGridTests */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +182,13 @@
 				9106B0AA288430AC002F4DE6 /* LaunchScreen.storyboard in Resources */,
 				9106B0A7288430AC002F4DE6 /* Assets.xcassets in Resources */,
 				9106B0A5288430AB002F4DE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9106B0B4288443B5002F4DE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +225,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9106B0B2288443B5002F4DE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9106B0B9288443B5002F4DE6 /* TimeGridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9106B0BB288443B5002F4DE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9106B099288430AB002F4DE6 /* TimeGrid */;
+			targetProxy = 9106B0BA288443B5002F4DE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9106B0A3288430AB002F4DE6 /* Main.storyboard */ = {
@@ -359,6 +435,44 @@
 			};
 			name = Release;
 		};
+		9106B0BD288443B5002F4DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6TZ3T94CD5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.flexj.TimeGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeGrid.app/TimeGrid";
+			};
+			name = Debug;
+		};
+		9106B0BE288443B5002F4DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6TZ3T94CD5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.flexj.TimeGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeGrid.app/TimeGrid";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -376,6 +490,15 @@
 			buildConfigurations = (
 				9106B0AF288430AC002F4DE6 /* Debug */,
 				9106B0B0288430AC002F4DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9106B0BC288443B5002F4DE6 /* Build configuration list for PBXNativeTarget "TimeGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9106B0BD288443B5002F4DE6 /* Debug */,
+				9106B0BE288443B5002F4DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
