@@ -17,9 +17,7 @@ class TimeGridTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-
-    }
+    func testExample() throws { }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
