@@ -1,0 +1,31 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: master
+env:
+  SIMULATOR: platform=iOS Simulator,name=iPhone 13 Pro,OS=15.5
+
+jobs:
+  swiftlint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: GitHub Action for SwiftLint with --strict
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict --config .swiftlint.yml
+  tests:
+    runs-on: macOS-12
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_13.4.1.app
+      - name: Build TimeGrid
+        run: xcodebuild build-for-testing -project TimeGrid.xcodeproj -scheme TimeGrid -destination "$SIMULATOR"
+      - name: Run TimeGrid Unit Tests
+        run: xcodebuild test-without-building -project TimeGrid.xcodeproj -scheme TimeGridTests -destination "$SIMULATOR"
