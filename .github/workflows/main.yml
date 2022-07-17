@@ -28,4 +28,4 @@ jobs:
       - name: Build TimeGrid
         run: xcodebuild build-for-testing -project TimeGrid.xcodeproj -scheme TimeGrid -destination "$SIMULATOR"
       - name: Run TimeGrid Unit Tests
-        run: xcodebuild test-without-building -project TimeGrid.xcodeproj -scheme TimeGridTests -destination "$SIMULATOR"
+        run: xcodebuild test-without-building -project TimeGrid.xcodeproj -scheme TimeGrid -destination "$SIMULATOR"
