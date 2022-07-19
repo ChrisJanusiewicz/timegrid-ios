@@ -13,12 +13,16 @@
 		9106B0A7288430AC002F4DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9106B0A6288430AC002F4DE6 /* Assets.xcassets */; };
 		9106B0AA288430AC002F4DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9106B0A8288430AC002F4DE6 /* LaunchScreen.storyboard */; };
 		9106B0B9288443B5002F4DE6 /* TimeGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106B0B8288443B5002F4DE6 /* TimeGridTests.swift */; };
-		913618382884A71F00CD181B /* AcitivityRecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913618372884A71F00CD181B /* AcitivityRecordRepository.swift */; };
 		9136183B2884ABC300CD181B /* TimeGrid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913618392884ABC300CD181B /* TimeGrid.xcdatamodeld */; };
 		9136183D2884BD2800CD181B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136183C2884BD2800CD181B /* CoreDataManager.swift */; };
 		9136184C2884CA4600CD181B /* ActivityTypeDAO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136184A2884CA4600CD181B /* ActivityTypeDAO+CoreDataClass.swift */; };
 		9136184F2884D15700CD181B /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9136184E2884D15700CD181B /* CoreDataRepository.swift */; };
 		91E23757288DF6D600A8E8B0 /* ActivityRecordDAO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23756288DF6D600A8E8B0 /* ActivityRecordDAO+CoreDataClass.swift */; };
+		91E2375D288DF6D600A8E8B0 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2375C288DF6D600A8E8B0 /* Repository.swift */; };
+		91E2375F288DF6D600A8E8B0 /* CoreDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2375E288DF6D600A8E8B0 /* CoreDataEntity.swift */; };
+		91E23761288DF6D600A8E8B0 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23760288DF6D600A8E8B0 /* Entity.swift */; };
+		91E23768288DF6D600A8E8B0 /* ActivityRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23767288DF6D600A8E8B0 /* ActivityRecord.swift */; };
+		91E2376A288DF6D600A8E8B0 /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23769288DF6D600A8E8B0 /* ActivityType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +45,16 @@
 		9106B0AB288430AC002F4DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9106B0B6288443B5002F4DE6 /* TimeGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9106B0B8288443B5002F4DE6 /* TimeGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGridTests.swift; sourceTree = "<group>"; };
-		913618372884A71F00CD181B /* AcitivityRecordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcitivityRecordRepository.swift; sourceTree = "<group>"; };
 		9136183A2884ABC300CD181B /* ActivityRecordDAO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActivityRecordDAO.xcdatamodel; sourceTree = "<group>"; };
 		9136183C2884BD2800CD181B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		9136184A2884CA4600CD181B /* ActivityTypeDAO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityTypeDAO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9136184E2884D15700CD181B /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		91E23756288DF6D600A8E8B0 /* ActivityRecordDAO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActivityRecordDAO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		91E2375C288DF6D600A8E8B0 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		91E2375E288DF6D600A8E8B0 /* CoreDataEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntity.swift; sourceTree = "<group>"; };
+		91E23760288DF6D600A8E8B0 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		91E23767288DF6D600A8E8B0 /* ActivityRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecord.swift; sourceTree = "<group>"; };
+		91E23769288DF6D600A8E8B0 /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,14 +105,8 @@
 		9106B09C288430AB002F4DE6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				91E23756288DF6D600A8E8B0 /* ActivityRecordDAO+CoreDataClass.swift */,
-				9136184A2884CA4600CD181B /* ActivityTypeDAO+CoreDataClass.swift */,
-				9106B09D288430AB002F4DE6 /* AppDelegate.swift */,
-				9106B09F288430AB002F4DE6 /* SceneDelegate.swift */,
-				9106B0A1288430AB002F4DE6 /* ViewController.swift */,
-				913618372884A71F00CD181B /* AcitivityRecordRepository.swift */,
-				9136183C2884BD2800CD181B /* CoreDataManager.swift */,
-				9136184E2884D15700CD181B /* CoreDataRepository.swift */,
+				91E23759288DF6D600A8E8B0 /* Activity */,
+				91E23758288DF6D600A8E8B0 /* Core */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -126,6 +128,80 @@
 				913618392884ABC300CD181B /* TimeGrid.xcdatamodeld */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		91E23758288DF6D600A8E8B0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9106B09D288430AB002F4DE6 /* AppDelegate.swift */,
+				9106B09F288430AB002F4DE6 /* SceneDelegate.swift */,
+				9106B0A1288430AB002F4DE6 /* ViewController.swift */,
+				91E23762288DF6D600A8E8B0 /* Persistence */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		91E23759288DF6D600A8E8B0 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				91E23764288DF6D600A8E8B0 /* Persistence */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		91E2375A288DF6D600A8E8B0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				91E23760288DF6D600A8E8B0 /* Entity.swift */,
+				91E2375C288DF6D600A8E8B0 /* Repository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		91E2375B288DF6D600A8E8B0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				91E2375E288DF6D600A8E8B0 /* CoreDataEntity.swift */,
+				9136183C2884BD2800CD181B /* CoreDataManager.swift */,
+				9136184E2884D15700CD181B /* CoreDataRepository.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		91E23762288DF6D600A8E8B0 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				91E2375B288DF6D600A8E8B0 /* CoreData */,
+				91E2375A288DF6D600A8E8B0 /* Domain */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		91E23764288DF6D600A8E8B0 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				91E23766288DF6D600A8E8B0 /* Domain */,
+				91E23765288DF6D600A8E8B0 /* CoreData */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		91E23765288DF6D600A8E8B0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				91E23756288DF6D600A8E8B0 /* ActivityRecordDAO+CoreDataClass.swift */,
+				9136184A2884CA4600CD181B /* ActivityTypeDAO+CoreDataClass.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		91E23766288DF6D600A8E8B0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				91E23767288DF6D600A8E8B0 /* ActivityRecord.swift */,
+				91E23769288DF6D600A8E8B0 /* ActivityType.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,15 +325,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E2376A288DF6D600A8E8B0 /* ActivityType.swift in Sources */,
 				91E23757288DF6D600A8E8B0 /* ActivityRecordDAO+CoreDataClass.swift in Sources */,
+				91E2375F288DF6D600A8E8B0 /* CoreDataEntity.swift in Sources */,
 				9136183D2884BD2800CD181B /* CoreDataManager.swift in Sources */,
 				9106B0A2288430AB002F4DE6 /* ViewController.swift in Sources */,
 				9106B09E288430AB002F4DE6 /* AppDelegate.swift in Sources */,
 				9136183B2884ABC300CD181B /* TimeGrid.xcdatamodeld in Sources */,
 				9136184C2884CA4600CD181B /* ActivityTypeDAO+CoreDataClass.swift in Sources */,
+				91E23768288DF6D600A8E8B0 /* ActivityRecord.swift in Sources */,
 				9106B0A0288430AB002F4DE6 /* SceneDelegate.swift in Sources */,
+				91E23761288DF6D600A8E8B0 /* Entity.swift in Sources */,
+				91E2375D288DF6D600A8E8B0 /* Repository.swift in Sources */,
 				9136184F2884D15700CD181B /* CoreDataRepository.swift in Sources */,
-				913618382884A71F00CD181B /* AcitivityRecordRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
