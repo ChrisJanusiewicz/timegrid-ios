@@ -23,6 +23,11 @@
 		91E23761288DF6D600A8E8B0 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23760288DF6D600A8E8B0 /* Entity.swift */; };
 		91E23768288DF6D600A8E8B0 /* ActivityRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23767288DF6D600A8E8B0 /* ActivityRecord.swift */; };
 		91E2376A288DF6D600A8E8B0 /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23769288DF6D600A8E8B0 /* ActivityType.swift */; };
+		91E2376C288DF6D600A8E8B0 /* ActivityTypeConfigurationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2376B288DF6D600A8E8B0 /* ActivityTypeConfigurationVC.swift */; };
+		91E2376E288DF6D600A8E8B0 /* ActivityTypeConfigurationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2376D288DF6D600A8E8B0 /* ActivityTypeConfigurationVM.swift */; };
+		91E23772288DF6D600A8E8B0 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23771288DF6D600A8E8B0 /* ActivityService.swift */; };
+		91E23775288DF6D600A8E8B0 /* ActivityTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23774288DF6D600A8E8B0 /* ActivityTypeCell.swift */; };
+		91E2377B288DF6D600A8E8B0 /* UITableView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E23779288DF6D600A8E8B0 /* UITableView+Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		91E23760288DF6D600A8E8B0 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		91E23767288DF6D600A8E8B0 /* ActivityRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRecord.swift; sourceTree = "<group>"; };
 		91E23769288DF6D600A8E8B0 /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
+		91E2376B288DF6D600A8E8B0 /* ActivityTypeConfigurationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeConfigurationVC.swift; sourceTree = "<group>"; };
+		91E2376D288DF6D600A8E8B0 /* ActivityTypeConfigurationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeConfigurationVM.swift; sourceTree = "<group>"; };
+		91E23771288DF6D600A8E8B0 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
+		91E23774288DF6D600A8E8B0 /* ActivityTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeCell.swift; sourceTree = "<group>"; };
+		91E23779288DF6D600A8E8B0 /* UITableView+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Util.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,7 @@
 		91E23758288DF6D600A8E8B0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				91E23777288DF6D600A8E8B0 /* Extensions */,
 				9106B09D288430AB002F4DE6 /* AppDelegate.swift */,
 				9106B09F288430AB002F4DE6 /* SceneDelegate.swift */,
 				9106B0A1288430AB002F4DE6 /* ViewController.swift */,
@@ -144,6 +155,7 @@
 		91E23759288DF6D600A8E8B0 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				91E23773288DF6D600A8E8B0 /* View */,
 				91E23764288DF6D600A8E8B0 /* Persistence */,
 			);
 			path = Activity;
@@ -198,10 +210,45 @@
 		91E23766288DF6D600A8E8B0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				91E23770288DF6D600A8E8B0 /* Service */,
+				91E2376F288DF6D600A8E8B0 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		91E2376F288DF6D600A8E8B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				91E23767288DF6D600A8E8B0 /* ActivityRecord.swift */,
 				91E23769288DF6D600A8E8B0 /* ActivityType.swift */,
 			);
-			path = Domain;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91E23770288DF6D600A8E8B0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				91E23771288DF6D600A8E8B0 /* ActivityService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		91E23773288DF6D600A8E8B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91E23774288DF6D600A8E8B0 /* ActivityTypeCell.swift */,
+				91E2376B288DF6D600A8E8B0 /* ActivityTypeConfigurationVC.swift */,
+				91E2376D288DF6D600A8E8B0 /* ActivityTypeConfigurationVM.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91E23777288DF6D600A8E8B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91E23779288DF6D600A8E8B0 /* UITableView+Util.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +372,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E2377B288DF6D600A8E8B0 /* UITableView+Util.swift in Sources */,
+				91E23775288DF6D600A8E8B0 /* ActivityTypeCell.swift in Sources */,
 				91E2376A288DF6D600A8E8B0 /* ActivityType.swift in Sources */,
 				91E23757288DF6D600A8E8B0 /* ActivityRecordDAO+CoreDataClass.swift in Sources */,
 				91E2375F288DF6D600A8E8B0 /* CoreDataEntity.swift in Sources */,
@@ -333,10 +382,13 @@
 				9106B09E288430AB002F4DE6 /* AppDelegate.swift in Sources */,
 				9136183B2884ABC300CD181B /* TimeGrid.xcdatamodeld in Sources */,
 				9136184C2884CA4600CD181B /* ActivityTypeDAO+CoreDataClass.swift in Sources */,
+				91E2376E288DF6D600A8E8B0 /* ActivityTypeConfigurationVM.swift in Sources */,
+				91E2376C288DF6D600A8E8B0 /* ActivityTypeConfigurationVC.swift in Sources */,
 				91E23768288DF6D600A8E8B0 /* ActivityRecord.swift in Sources */,
 				9106B0A0288430AB002F4DE6 /* SceneDelegate.swift in Sources */,
 				91E23761288DF6D600A8E8B0 /* Entity.swift in Sources */,
 				91E2375D288DF6D600A8E8B0 /* Repository.swift in Sources */,
+				91E23772288DF6D600A8E8B0 /* ActivityService.swift in Sources */,
 				9136184F2884D15700CD181B /* CoreDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
