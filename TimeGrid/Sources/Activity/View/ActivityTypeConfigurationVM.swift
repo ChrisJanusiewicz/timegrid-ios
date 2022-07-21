@@ -9,8 +9,13 @@ import Foundation
 
 class ActivityTypeConfigurationVM {
 
-    let service = ActivityService(
-        activityRepository: CoreDataRepository<ActivityRecord, ActivityRecordDAO>(context: CoreDataManager.instance.container.viewContext),
-        activityTypeRepository: CoreDataRepository<ActivityType, ActivityTypeDAO>(context: CoreDataManager.instance.container.viewContext)
-    )
+    let service: ActivityService
+
+    init(service: ActivityService) {
+        self.service = service
+    }
+
+    var activityTypes: [ActivityType] {
+        service.getActivityTypes()
+    }
 }

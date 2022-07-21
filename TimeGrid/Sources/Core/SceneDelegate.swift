@@ -20,7 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
-        window.rootViewController = ActivityTypeConfigurationVC()
+        let coreDataContext = CoreDataManager.instance.container.viewContext
+        window.rootViewController = ActivityTypeConfigurationVC(
+            viewModel: ActivityTypeConfigurationVM(service: ActivityService(
+                activityRepository: CoreDataRepository<ActivityRecord, ActivityRecordDAO>(context: coreDataContext),
+                activityTypeRepository: CoreDataRepository<ActivityType, ActivityTypeDAO>(context: coreDataContext)
+            ))
+        )
         window.makeKeyAndVisible()
     }
 

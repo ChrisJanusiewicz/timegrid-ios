@@ -9,18 +9,23 @@ import UIKit
 
 class ActivityTypeConfigurationVC: UIViewController {
 
+    let viewModel: ActivityTypeConfigurationVM
+
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
 
-    let viewModel = ActivityTypeConfigurationVM()
+    init(viewModel: ActivityTypeConfigurationVM) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) { nil }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .systemPurple
 
         setupTableView()
         layoutTableView()
@@ -50,7 +55,7 @@ extension ActivityTypeConfigurationVC: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        viewModel.activityTypes.count
     }
 
 }
