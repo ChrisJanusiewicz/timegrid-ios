@@ -50,14 +50,18 @@ class ActivityTypeConfigurationVC: UIViewController {
 extension ActivityTypeConfigurationVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(ofType: ActivityTypeCell.self, for: indexPath)
-        cell.viewModel = ActivityType(id: UUID(), name: "sleep", comment: "time sleeping i guess")
+
+        if viewModel.activityTypes.indices.contains(indexPath.row) {
+            let activityType = viewModel.activityTypes[indexPath.row]
+            cell.viewModel = activityType
+        }
+
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.activityTypes.count
+        viewModel.activityTypes.count + 1
     }
-
 }
 
 extension ActivityTypeConfigurationVC: UITableViewDelegate {

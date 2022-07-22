@@ -66,5 +66,6 @@ class ActivityTypeCell: UITableViewCell {
 
         contentStack.addArrangedSubview(iconView)
         contentStack.addArrangedSubview(nameLabel)
+        contentStack.addArrangedSubview(commentLabel)
     }
 }
