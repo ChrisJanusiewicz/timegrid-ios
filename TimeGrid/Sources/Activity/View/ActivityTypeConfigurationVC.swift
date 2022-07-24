@@ -33,7 +33,6 @@ class ActivityTypeConfigurationVC: UIViewController {
 
     func setupTableView() {
         tableView.dataSource = self
-        tableView.delegate = self
 
         tableView.register(ActivityTypeCell.self)
     }
@@ -62,8 +61,4 @@ extension ActivityTypeConfigurationVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.activityTypes.count + 1
     }
-}
-
-extension ActivityTypeConfigurationVC: UITableViewDelegate {
-
 }

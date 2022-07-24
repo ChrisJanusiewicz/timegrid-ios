@@ -21,13 +21,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
 
         let coreDataContext = CoreDataManager.instance.container.viewContext
+        let activityRepository = CoreDataRepository<ActivityRecord, ActivityRecordDAO>(context: coreDataContext)
+        let activityTypeRepository = CoreDataRepository<ActivityType, ActivityTypeDAO>(context: coreDataContext)
+
+        // TODO: hardcode this elsewhere with some better checks (only ~10 records - could consider fetching from API?)
+        prepopulateTypes(repository: activityTypeRepository)
+
         window.rootViewController = ActivityTypeConfigurationVC(
             viewModel: ActivityTypeConfigurationVM(service: ActivityService(
-                activityRepository: CoreDataRepository<ActivityRecord, ActivityRecordDAO>(context: coreDataContext),
-                activityTypeRepository: CoreDataRepository<ActivityType, ActivityTypeDAO>(context: coreDataContext)
+                activityRepository: activityRepository,
+                activityTypeRepository: activityTypeRepository
             ))
         )
         window.makeKeyAndVisible()
+    }
+
+    private func prepopulateTypes(repository: Repository<ActivityType>) {
+        var activityTypesToAdd: [ActivityType] = [
+            ActivityType(id: UUID(), name: "Sleep", comment: "Sleeping, or actively trying to fall asleep"),
+            ActivityType(id: UUID(), name: "Downtime", comment: "Scheduled break/active rest"),
+            ActivityType(id: UUID(), name: "Work", comment: "Billable hours"),
+            ActivityType(id: UUID(), name: "Travel/Groceries", comment: nil),
+            ActivityType(id: UUID(), name: "Chores", comment: nil),
+            ActivityType(id: UUID(), name: "Prep/Eating", comment: "Self-care, cooking, eating"),
+            ActivityType(id: UUID(), name: "Family", comment: "Dedicated special time for SO/Family"),
+            ActivityType(id: UUID(), name: "Social", comment: "Dedicated special time with friends"),
+            ActivityType(id: UUID(), name: "Wasted Time", comment: "Procrastination"),
+            ActivityType(id: UUID(), name: "Exercise", comment: nil),
+            ActivityType(id: UUID(), name: "Productivity", comment: "Personal development"),
+        ]
+        switch repository.get(predicate: nil, sortDescriptors: nil) {
+        case .success(let existingTypes):
+            let existingTypeNames = existingTypes.map { $0.name }
+            activityTypesToAdd = activityTypesToAdd.filter { !existingTypeNames.contains($0.name) }
+        case .failure(let error):
+            print("Unable to fetch existing activity types: \(error)")
+        }
+
+        activityTypesToAdd.forEach { activityType in
+            repository.insert(entity: activityType)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
